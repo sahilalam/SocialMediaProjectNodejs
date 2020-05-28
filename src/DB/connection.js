@@ -2,10 +2,11 @@ const Sequelize=require('sequelize');
 
 
 const db=new Sequelize({
-    dialect:'mysql',
-    database:'socialmediadb',
+    dialect:'sqlite',
+    storage:__dirname+'/test.db'
+    /*database:'socialmediadb',
     username:'socialmediauser',
-    password:'Sa9958607056',
+    password:'Sa9958607056',*/
 });
 const users=db.define('users',{
     id:{

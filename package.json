@@ -9,12 +9,13 @@
     "init": "^0.1.2",
     "juery": "^1.0.0",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.9"
+    "sequelize": "^5.21.9",
+    "sqlite": "^4.0.9"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/server.js"
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC"
