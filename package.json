@@ -9,8 +9,10 @@
     "init": "^0.1.2",
     "juery": "^1.0.0",
     "mysql2": "^2.1.0",
+    "nan": "^2.14.1",
     "sequelize": "^5.21.9",
-    "sqlite": "^4.0.9"
+    "sqlite": "^4.0.9",
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {},
   "scripts": {
