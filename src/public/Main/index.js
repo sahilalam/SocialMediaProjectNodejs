@@ -1,0 +1,10 @@
+$(()=>{
+    $("#content").load("./Components/main.html");
+    $("#nav").load('./Components/navbar.html',()=>{
+        main();
+        $("#searchbutton").click(()=>{
+            search();
+        })
+    });
+}
+)

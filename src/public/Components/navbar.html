@@ -1,0 +1,102 @@
+<style>
+  .button
+{
+    width:100px;
+    height: 30px;
+    text-align: center;
+    color: wheat;
+    padding: 0px;
+    margin: 10px;
+    
+    background-color:rgba(192, 192, 192, 0.438);
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow:#5bc0de 0px 2px 5px;
+}
+.button:hover
+{
+    padding:1px;
+    
+    transform:translateY(-3px);
+    transition: 1s;
+    box-shadow:blueviolet 0px 10px 10px;
+    
+}
+.button:active
+{
+    
+    transform:translateY(4px);
+    transition: 0.5s;
+    box-shadow: magenta 0px 0px 10px;
+}
+#nav1{
+    height: 100%;   
+    background-image: url("/Components/20.png");
+    color: cyan; 
+}
+a{
+  color:white;
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+}
+#nav2{
+  height: 0px;
+  
+}
+
+</style>
+<nav class="navbar navbar-expand-lg nav-tabs navbar-dark" id="nav1">
+    <a class="navbar-brand" href="/"><img src="/Components/SA.png" width="100px" height="100px">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto" >
+        <li class="nav-item">
+          <a class="nav-link" id="users"href="/U/users.html"><img src="/Components/rocket.png" width="40px" height="40px">@Elite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/P/posts.html"><img src="/Components/fire.gif" width="40px" height="40px">#Trending</a>
+        </li>
+        <form class="form-inline" style="padding: 5px;" >
+          <input id="searchinput" class="form-control mr-sm-2" type="search" placeholder="Search(@username or #topic)" aria-label="Search" style="width: 395px;">
+          <button id="searchbutton" class="btn btn-outline-info my-2 my-sm-0" type="button" style="width: 100px;">Search</button>
+        </form>
+        
+      </ul>
+      
+        <a href="#">
+          <div class="button" id="2" >
+          SignUp
+        </div>
+      </a>
+        <a href="#">
+        <div class="button" id="3" >
+          Login IN
+      </div>
+    </a>
+      
+   <div class="button" id="1" style="
+   background-color: rgba(253, 253, 237, 0.534);
+   color: white;
+   border-radius: 20px;
+   width: 200px;
+   height: 35px;
+   padding: 2px;
+   
+   font-size: large;
+   border: 3px solid #5bc0de;
+   ">
+   </div>
+   <a href="#">
+   <div class="button" id="4">
+    Logout
+  </div>
+</a>
+</nav>
+
+
+  
+

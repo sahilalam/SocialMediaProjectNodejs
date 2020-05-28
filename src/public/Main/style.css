@@ -1,0 +1,35 @@
+#nav{
+     
+    position: sticky; 
+    top:0px; 
+    z-index: 1;
+}
+
+#main{
+    background-image: url("/Components/13.gif");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+#content{
+    
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap; 
+}
+#fo{
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap; 
+}
+#Footer{
+    position: sticky;
+}
+
+
+
+
+
+
