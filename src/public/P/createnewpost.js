@@ -16,11 +16,13 @@ $(()=>{
         <div class="form-group">
         <label for="exampleFormControlSelect1">Example select</label>
         <select class="form-control" id="exampleFormControlSelect1">
-        <option>Social</option>
-        <option>Tech</option>
-        <option>Sports</option>
-        <option>Entertainment</option>
-        <option>Other</option>
+        <option>social</option>
+        <option>tech</option>
+        <option>sports</option>
+        <option>entertainment</option>
+        <option>educational</option>
+        <option>fun</option>
+        <option>other</option>
         </select>
         </div>
         <div class="form-group">

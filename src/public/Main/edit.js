@@ -52,14 +52,12 @@ $(()=>{
                     <a href="/P/singlepost.html?q1=${p.id}&q2=${JSON.parse(window.localStorage.user).id}">
                     <button type="button" class="btn btn-light" id="like">Show More</button>
                     </a>
-                    <button type="button" class="btn btn-light" id="delete">Delete</button>
                     </div>
                     </div>
                     <br>
         
                     `));
                 }
-                
             })
         })
         
