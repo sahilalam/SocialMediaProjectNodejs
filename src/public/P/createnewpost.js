@@ -14,7 +14,7 @@ $(()=>{
             <input style=" background-color:rgba(80, 80, 77, 0.116);"type="text" class="form-control" id="title" placeholder="Enter tite of your post here!">
         </div>
         <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
+        <label for="exampleFormControlSelect1">Select #Trend</label>
         <select class="form-control" id="exampleFormControlSelect1">
         <option>social</option>
         <option>tech</option>
