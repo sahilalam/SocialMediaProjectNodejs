@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 const db;
-if(process.env.DATABASE_URL)
+if(process.env.DATABASE_URI)
 {
     db=new Sequelize(process.env.DATABASE_URI);
 }
