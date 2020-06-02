@@ -1,13 +1,21 @@
 const Sequelize=require('sequelize');
 
+const db;
+if(process.env.DATABASE_URL)
+{
+    db=new Sequelize(process.env.DATABASE_URL);
+}
+else
+{
+    db=new Sequelize({
+        dialect:'sqlite',
+        storage:__dirname+'/test.db'
+        /*database:'socialmediadb',
+        username:'socialmediauser',
+        password:'Sa9958607056',*/
+    });
 
-const db=new Sequelize({
-    dialect:'sqlite',
-    storage:__dirname+'/test.db'
-    /*database:'socialmediadb',
-    username:'socialmediauser',
-    password:'Sa9958607056',*/
-});
+}
 const users=db.define('users',{
     id:{
         type:Sequelize.DataTypes.INTEGER,
