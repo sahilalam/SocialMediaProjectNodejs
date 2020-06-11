@@ -68,6 +68,14 @@ const posts=db.define('posts',{
     keyword:{
         type:Sequelize.DataTypes.STRING(100),
         allowNull:false
+    },
+    fileurl:{
+        type:Sequelize.DataTypes.STRING(200),
+        allowNull:true,
+    },
+    fileformat:{
+        type:Sequelize.DataTypes.STRING(100),
+        allowNull:true
     }
 
 });

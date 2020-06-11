@@ -18,7 +18,8 @@ $(()=>{
             <div class="card-header">
             <h5 class="card-title"><u>${post.user.username}</u>: "${post.title}"</h5>
             </div>
-            <div class="card-body">
+            <div class="card-body" id="image${post.id}">
+            <br>
             <span class="card-text"><small class="text-muted" ><u>Likes:</u> <b id="nol">${post.likes}</b></small></span>  |  
             <span class="card-text"><small class="text-muted"><u>Keyword:</u> ${post.keyword}</small></span>
             <p class="card-text" id="post">${post.body}</p>
@@ -37,6 +38,15 @@ $(()=>{
             <br>
             `
             ))
+            if(post.fileformat!=null && post.fileurl!=null)
+            {
+                console.log(post.fileurl);
+                if(post.fileformat=="jpg" || post.fileformat=="jpeg" || post.fileformat=="png" || post.fileformat=="gif")
+                {
+                    $(`#image${post.id}`).prepend($(`<img src=${post.fileurl} id="pi">`))
+                }
+
+            }
             url=`/posts/like/${userid}/${postid}`;
             $.get(url,(data)=>{
                 if(data.mssg=="liked"){$("#like").text("Liked");}

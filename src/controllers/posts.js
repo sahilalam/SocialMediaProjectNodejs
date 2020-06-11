@@ -1,11 +1,13 @@
 const {posts,users,likesmapper}=require('../DB/connection');
-async function createNewPost(userId,title,body,keyword){
+async function createNewPost(userId,title,body,keyword,fileurl,fileformat){
     let post=await posts.create({
         title,
         body,
         userId,
         likes:0,
-        keyword:keyword
+        keyword:keyword,
+        fileurl:`${fileurl}`,
+        fileformat:`${fileformat}`
     })
     return post;
 }

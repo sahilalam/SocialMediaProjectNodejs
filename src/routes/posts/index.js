@@ -31,7 +31,7 @@ router.post("/comments/:postid/:userid",async(req,res)=>{
     res.send("done");
 })
 router.post("/",async(req,res)=>{
-    await createNewPost(req.body.id,req.body.title,req.body.post,req.body.keyword);
+    await createNewPost(req.body.id,req.body.title,req.body.post,req.body.keyword,req.body.file_url,req.body.file_format);
     res.send("done");
 })
 router.post("/like",async(req,res)=>{

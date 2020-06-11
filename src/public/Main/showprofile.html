@@ -16,14 +16,57 @@
     <script async defer src="/Main/edit.js"></script>
 </head>
 <style>
+     #SA{
+      width:50px;
+      height:50px;
+    }
+    #content{
+        min-height: 100vh;
+    }
     #main{
         background-image: url("/Components/13.gif");
-        min-height: 100vh;
+        
     }
     #cardbody{
         background-image: url("/Components/14.gif");
         border-radius: 5px;
     }
+    #c{
+            width:50vw;
+            margin: 20px;
+            box-shadow: 5px 5px 10px gray;
+            border-radius: 10px;
+            color: black;
+            height: max-content;
+            background-color: ivory;
+
+        }
+        #post{
+            
+            background-color: rgba(34, 29, 65, 0.4);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 10px darkgrey;
+        }
+        #c1{
+            
+            margin: 20px;
+            box-shadow: 5px 5px 10px gray;
+            border-radius: 10px;
+            color: black;
+            height: max-content;
+            background-color: ivory;
+
+        }
+        @media screen and (max-width: 700px){
+            #c{
+                width: 90vw;
+            }
+            #post{
+                width:inherit;
+            }
+        }
 </style>
 <body>
     <div id="main">

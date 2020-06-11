@@ -82,7 +82,7 @@ let searchbyid=function(userid,currentuser)
         {
             
             $("#cardbody").append($(`
-            <div class="card " id="c">
+            <div class="card " id="c1">
             <div class="card-header">
             <h5 class="card-title">Title: ${p.title}</h5>
             </div>
@@ -174,7 +174,7 @@ let searchbyname=function(userid,currentuser)
             {
                 
                 $("#cardbody").append($(`
-                <div class="card " id="c">
+                <div class="card " id="c1">
                 <div class="card-header">
                 <h5 class="card-title">Title: ${p.title}</h5>
                 </div>
