@@ -47,8 +47,8 @@ $(()=>{
                 </div>
                 <div class="card-body" id="image${post.id}">
                 <br>
-                <span class="card-text"><small class="text-muted" ><u>Likes:</u><b id="nol">${post.likes}</b></small></span>  |  
-                <span class="card-text"><small class="text-muted"><u>Keyword:</u> ${post.keyword}</small></span>
+                <span class="card-text"><small class="text-muted" ><u>Likes:</u><b id="nol-${post.id}">${post.likes}</b></small></span>  |  
+                <span class="card-text"><small class="text-muted"> #${post.keyword}</small></span>
                 <p class="card-text" id="post">${post.body}</p>
                 <button type="button" class="btn btn-light" id="like-${post.id}">Like</button>
                 <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample${post.id}" role="button" aria-expanded="false" aria-controls="multiCollapseExample${post.id}">
@@ -95,7 +95,7 @@ $(()=>{
                     <br>
                     <form class="form-inline">
                     <div class="form-group mx-sm-3 mb-2">
-                        <input type="text" class="form-control" id="input2" placeholder="Add new comment!!">
+                        <input type="text" class="form-control" id="input2-${post.id}" placeholder="Add new comment!!">
                     </div>
                     <button type="button" class="btn btn-info mb-2" id="comment-${post.id}">Comment</button>
                     </form>
@@ -106,8 +106,8 @@ $(()=>{
                             window.alert("Login First");
                             return;
                         }
-                        const body=$("#input2").val();
-                        $.post(`/posts/comments/${post.id}/${userid}`,{comment:$("#input2").val()},(data)=>{
+                        
+                        $.post(`/posts/comments/${post.id}/${userid}`,{comment:$(`#input2-${post.id}`).val()},(data)=>{
                             console.log(data);
                             location.reload();
                         })
@@ -125,7 +125,7 @@ $(()=>{
                         userid:userid,
                         postid:post.id
                     },(data)=>{
-                        $("#nol").text(data.likes);
+                        $(`#nol-${post.id}`).text(data.likes);
                         $(`#like-${post.id}`).text("Liked");
                     })
                 })

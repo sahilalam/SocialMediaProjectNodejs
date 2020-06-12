@@ -20,7 +20,7 @@ $(()=>{
             </div>
             <div class="card-body" id="image${post.id}">
             <br>
-            <span class="card-text"><small class="text-muted" ><u>Likes:</u> <b id="nol">${post.likes}</b></small></span>  |  
+            <span class="card-text"><small class="text-muted" ><u>Likes:</u> <b id="nol=${post.id}">${post.likes}</b></small></span>  |  
             <span class="card-text"><small class="text-muted"><u>Keyword:</u> ${post.keyword}</small></span>
             <p class="card-text" id="post">${post.body}</p>
             <p>
@@ -66,7 +66,7 @@ $(()=>{
                 <br>
                 <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
-                    <input type="text" class="form-control" id="input2" placeholder="Add new comment!!">
+                    <input type="text" class="form-control" id="input2-${post.id}" placeholder="Add new comment!!">
                 </div>
                 <button type="button" class="btn btn-info mb-2" id="bds">Comment</button>
                 </form>
@@ -78,7 +78,7 @@ $(()=>{
                         return;
                     }
                     const body=$("#input2").val();
-                    $.post(`/posts/comments/${postid}/${JSON.parse(window.localStorage.user).id}`,{comment:$("#input2").val()},(data)=>{
+                    $.post(`/posts/comments/${postid}/${JSON.parse(window.localStorage.user).id}`,{comment:$(`#input2-${post.id}`).val()},(data)=>{
                         console.log(data);
                         location.reload();
                     })
@@ -96,7 +96,7 @@ $(()=>{
                     userid:userid,
                     postid:postid
                 },(data)=>{
-                    $("#nol").text(data.likes);
+                    $(`nol-${post.id}`).text(data.likes);
                     $("#like").text("Liked");
                 })
             })
