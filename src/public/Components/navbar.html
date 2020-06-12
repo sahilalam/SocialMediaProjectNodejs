@@ -4,7 +4,7 @@
     width:100px;
     height: 30px;
     text-align: center;
-    color: wheat;
+    color: black;
     padding: 0px;
     margin: 10px;
     border:2px solid #5bc0de;
@@ -32,7 +32,8 @@
 }
 #nav1{
     height: 100%;   
-    background-image: url("/Components/20.png");
+    background-color: rgba(170, 211, 210, 0.74);
+    /*background-image: url("/Components/n.gif");*/
     color: cyan; 
 }
 a{
@@ -48,7 +49,7 @@ a:hover{
 }
 
 </style>
-<nav class="navbar navbar-expand-lg nav-tabs navbar-dark" id="nav1">
+<nav class="navbar navbar-expand-lg nav-tabs navbar-light" id="nav1">
     <a class="navbar-brand" href="/"><img src="/Components/SA.png" id="SA">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -63,7 +64,7 @@ a:hover{
         </li>
         <form class="form-inline" style="padding: 5px;" >
           <input id="searchinput" class="form-control mr-sm-2" type="search" placeholder="Search(@username or #topic)" aria-label="Search" style="width: 395px;">
-          <button id="searchbutton" class="btn btn-outline-info my-2 my-sm-0" type="button" style="width: 100px;">Search</button>
+          <button id="searchbutton" class="btn btn-secondary my-2 my-sm-0" type="button" style="width: 100px;">Search</button>
         </form>
         
       </ul>
