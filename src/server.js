@@ -22,6 +22,6 @@ db.sync()
 })
 .catch((err)=>{
     console.error("DATABASE NOT CONNECTED");
-    comsole.error(err);
+    console.error(err);
 })
 
